@@ -1,0 +1,14 @@
+$pc: 901px; // pcのみ
+$sp: 900px; // spのみ
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
