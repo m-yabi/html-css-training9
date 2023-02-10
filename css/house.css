@@ -97,4 +97,8 @@ header {
 main,
 footer {
   margin-left: 300px;
+}
+
+ul {
+  display: flex;
 }/*# sourceMappingURL=house.css.map */
