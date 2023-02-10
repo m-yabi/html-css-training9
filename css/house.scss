@@ -1,1 +1,28 @@
 @import "_settings.scss";
+header {
+  margin: 40px 55px 0px 45px;
+  max-width: 300px;
+  position: fixed;
+}
+.header__logo {
+  width: 200px;
+  margin-bottom: 40px;
+}
+.menu__list,
+.sns__list {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.header__menu {
+  margin-bottom: 60px;
+}
+.movie {
+  height: 100vh;
+  position: fixed;
+  z-index: -10;
+}
+
+main,
+footer {
+  margin-left: 300px;
+}
