@@ -8,12 +8,35 @@ $(function () {
     $(".openbtn1").removeClass("active");
     $("#header__menu").removeClass("panelactive");
   });
-
-  $(".reason__list1, .reason__list2").on("inview", function () {
-    $(this).addClass("fadein");
+  var appear = false;
+  var pagetop = $("#page_top");
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 700) {
+      //700pxスクロールしたら
+      if (appear == false) {
+        appear = true;
+        pagetop.stop().animate(
+          {
+            bottom: "25px", //下から50pxの位置に
+          },
+          300
+        ); //0.3秒かけて現れる
+      }
+    } else {
+      if (appear) {
+        appear = false;
+        pagetop.stop().animate(
+          {
+            bottom: "-25px", //下から-50pxの位置に
+          },
+          300
+        ); //0.3秒かけて隠れる
+      }
+    }
   });
-  $(".student,.student1").on("inview", function () {
-    $(this).addClass("inview");
+  pagetop.click(function () {
+    $("body, html").animate({ scrollTop: 0 }, 500); //0.5秒かけてトップへ戻る
+    return false;
   });
 });
 
