@@ -2,36 +2,22 @@ $(function () {
   $(".openbtn1").click(function () {
     $(this).toggleClass("active");
     $("#header__menu").toggleClass("panelactive");
+    $("header").toggleClass("panelactive");
   });
 
-  $(".menu__list a").click(function () {
+  $(".header__menu__list a").click(function () {
     $(".openbtn1").removeClass("active");
+    $("header").removeClass("panelactive");
     $("#header__menu").removeClass("panelactive");
   });
-  var appear = false;
+
   var pagetop = $("#page_top");
+  pagetop.hide();
   $(window).scroll(function () {
     if ($(this).scrollTop() > 700) {
-      //700pxスクロールしたら
-      if (appear == false) {
-        appear = true;
-        pagetop.stop().animate(
-          {
-            bottom: "25px", //下から50pxの位置に
-          },
-          300
-        ); //0.3秒かけて現れる
-      }
+      pagetop.fadeIn();
     } else {
-      if (appear) {
-        appear = false;
-        pagetop.stop().animate(
-          {
-            bottom: "-25px", //下から-50pxの位置に
-          },
-          300
-        ); //0.3秒かけて隠れる
-      }
+      pagetop.fadeOut();
     }
   });
   pagetop.click(function () {

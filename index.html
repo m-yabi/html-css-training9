@@ -19,25 +19,31 @@
           <img src="img/logo (7).svg" alt="明るいHOUSEロゴ" />
         </a>
       </h1>
-      <nav class="header__menu">
-        <ul>
+      <div class="openbtn1">
+        <span class="openbtn"></span><span class="openbtn"></span
+        ><span class="openbtn"></span>
+      </div>
+      <nav id="header__menu">
+        <ul class="header__menu">
           <li class="header__menu__list"><a href="#">私たちについて</a></li>
           <li class="header__menu__list"><a href="#">サービス</a></li>
           <li class="header__menu__list"><a href="#">商品情報</a></li>
           <li class="header__menu__list"><a href="#">展示会</a></li>
           <li class="header__menu__list"><a href="#">暮らしの日記</a></li>
           <li class="header__menu__list"><a href="#">会社概要</a></li>
+          <li class="sns__list">
+            <a class="sns__list__twitter" href="https://twitter.com/"
+              >Twitter</a
+            >
+          </li>
+          <li class="sns__list">
+            <a href="https://www.facebook.com/">facebook</a>
+          </li>
+          <li class="sns__list">
+            <a href="https://www.instagram.com/">instagram</a>
+          </li>
         </ul>
       </nav>
-      <ul class="sns__menu">
-        <li class="sns__list"><a href="https://twitter.com/">Twitter</a></li>
-        <li class="sns__list">
-          <a href="https://www.facebook.com/">facebook</a>
-        </li>
-        <li class="sns__list">
-          <a href="https://www.instagram.com/">instagram</a>
-        </li>
-      </ul>
     </header>
     <main>
       <div class="main__visual">
@@ -45,7 +51,9 @@
       </div>
       <div class="container top">
         <div class="introduction__section">
-          <h2 class="section__title w">建築事例をご紹介</h2>
+          <h2 class="section__title section__title--primary">
+            建築事例をご紹介
+          </h2>
           <ul class="project__flex">
             <li class="project__list">
               <a href="#"
@@ -74,20 +82,31 @@
           </ul>
         </div>
         <div class="feature__section">
-          <h2 class="section__title w">明るいHOUSEの特徴</h2>
+          <h2 class="section__title section__title--primary">
+            明るいHOUSEの特徴
+          </h2>
           <ul class="feature">
             <li>
-              <a class="feature__list__title" href="#">design</a>
+              <a class="feature__list" href="#"
+                ><span class="feature__list__title">design</span></a
+              >
+
               <h3 class="feature__list__subtitle">デザイン</h3>
               <p class="feature__list__text">テキストテキストテキスト</p>
             </li>
             <li>
-              <a class="feature__list__title" href="#">quality</a>
+              <a class="feature__list" href="#"
+                ><span class="feature__list__title">quality</span></a
+              >
+
               <h3 class="feature__list__subtitle">性能</h3>
               <p class="feature__list__text">テキストテキストテキスト</p>
             </li>
             <li>
-              <a class="feature__list__title" href="#">support</a>
+              <a class="feature__list" href="#"
+                ><span class="feature__list__title">support</span></a
+              >
+
               <h3 class="feature__list__subtitle">サポート</h3>
               <p class="feature__list__text">テキストテキストテキスト</p>
             </li>
@@ -96,64 +115,69 @@
       </div>
       <div class="container bottom">
         <div class="flow__section">
-          <h2 class="section__title b">家ができるまでの流れ</h2>
-          <p>お問い合わせいただいてから、家が完成するまでの流れです。</p>
+          <h2 class="section__title section__title--secondary">
+            家ができるまでの流れ
+          </h2>
+          <p class="flow__section__text">
+            お問い合わせいただいてから、家が完成するまでの流れです。
+          </p>
           <div class="flowchart">
             <ol class="step">
-              <li class=".is-current">ヒアリング</li>
-              <li class=".is-current">プラン提案</li>
-              <li class=".is-current">契約</li>
-              <li class=".is-current">着工</li>
-              <li class=".is-current">完成</li>
+              <li class="is-current">ヒアリング</li>
+              <li class="is-current">プラン提案</li>
+              <li class="is-current">契約</li>
+              <li class="is-current">着工</li>
+              <li class="is-current">完成</li>
             </ol>
 
-            <dl class="description">
-              <dt>
-                <span>1</span>
-                ヒアリング
-              </dt>
-              <dd>
+            <div class="description__box">
+              <div class="description">
+                <div class="description__circlenumber">1</div>
+                <h3 class="description__title">ヒアリング</h3>
+              </div>
+              <p class="description__text">
                 テキストテキストテキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキストテキストテキスト
-              </dd>
-              <dt>
-                <span>2</span>
-                プラン提案
-              </dt>
-              <dd>
+              </p>
+
+              <div class="description">
+                <div class="description__circlenumber">2</div>
+                <h3 class="description__title">プラン提案</h3>
+              </div>
+              <p class="description__text">
                 テキストテキストテキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキストテキストテキスト
-              </dd>
-              <dt>
-                <span>3</span>
-                契約
-              </dt>
-              <dd>
+              </p>
+              <div class="description">
+                <div class="description__circlenumber">3</div>
+                <h3 class="description__title">契約</h3>
+              </div>
+              <p class="description__text">
                 テキストテキストテキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキストテキストテキスト
-              </dd>
-              <dt>
-                <span>4</span>
-                着工
-              </dt>
-              <dd>
+              </p>
+              <div class="description">
+                <div class="description__circlenumber">4</div>
+                <h3 class="description__title">着工</h3>
+              </div>
+              <p class="description__text">
                 テキストテキストテキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキストテキストテキスト
-              </dd>
-              <dt>
-                <span>5</span>
-                完成
-              </dt>
-              <dd>
+              </p>
+              <div class="description">
+                <div class="description__circlenumber">5</div>
+                <h3 class="description__title">完成</h3>
+              </div>
+              <p class="description__text">
                 テキストテキストテキストテキストテキストテキストテキストテキスト
                 テキストテキストテキストテキストテキストテキストテキストテキスト
-              </dd>
-            </dl>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="inquiry__wrapper">
-          <h2 class="section__title b">お問い合わせ</h2>
-          <p>お問い合わせは下記からお願いいたします。</p>
+        <div class="inquiry__section">
+          <h2 class="section__title section__title--secondary">お問い合わせ</h2>
+          <p class="inquiry__text">お問い合わせは下記からお願いいたします。</p>
           <ul class="inquiry">
             <li class="inquiry__list">
               <a href="#"
@@ -164,13 +188,13 @@
             <li class="inquiry__list">
               <a href="#"
                 ><img src="img/icon-seminar.png" />
-                <h3>Web説明会</h3></a
+                <h3 class="inquiry__list__title">Web説明会</h3></a
               >
             </li>
             <li class="inquiry__list">
               <a href="#"
                 ><img src="img/icon-talk.png" />
-                <h3>個別相談</h3></a
+                <h3 class="inquiry__list__title">個別相談</h3></a
               >
             </li>
           </ul>
@@ -180,23 +204,31 @@
     </main>
     <footer>
       <div class="footer__menu">
-        <a>私たちについて</a>
-        <a>サービス</a>
-        <a>商品情報</a>
-        <a>展示会</a>
-        <a>暮らしの日記</a>
-        <a>会社概要</a>
+        <a class="footer__menu__list" href="#">私たちについて</a>
+        <a class="footer__menu__list" href="#">サービス</a>
+        <a class="footer__menu__list" href="#">商品情報</a>
+        <a class="footer__menu__list" href="#">展示会</a>
+        <a class="footer__menu__list" href="#">暮らしの日記</a>
+        <a class="footer__menu__list" href="#">会社概要</a>
       </div>
       <small>Copyright © 2021 Akarui HOUSE All Rights Reserved.</small>
-      <a href="#" id="page_top"></a>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-2-6/js/5-2-6.js"></script>
+
+    <script>
+      var video = document.createElement("video");
+      video.src = "img/video.mp4";
+      video.loop = true;
+      video.muted = true;
+      video.play();
+      document.querySelector(".parallax-bg").appendChild(video);
+    </script>
+    <script src="./js/script.js"></script>
   </body>
-  <script>
-    var video = document.createElement("video");
-    video.src = "img/video.mp4";
-    video.loop = true;
-    video.muted = true;
-    video.play();
-    document.querySelector(".parallax-bg").appendChild(video);
-  </script>
 </html>
