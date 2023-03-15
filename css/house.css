@@ -111,7 +111,6 @@ header {
     opacity: 0.9;
     visibility: visible;
     background-color: #121212;
-    z-index: 0;
   }
 }
 
@@ -128,7 +127,16 @@ header {
 
 .main__visual {
   position: relative;
-  height: 100vh;
+}
+@media (min-width: 901px) {
+  .main__visual {
+    height: 100vh;
+  }
+}
+@media (max-width: 900px) {
+  .main__visual {
+    height: 600px;
+  }
 }
 
 .parallax-bg {
@@ -156,7 +164,6 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
   width: auto;
   height: auto;
   z-index: -1;
@@ -232,7 +239,7 @@ header {
   .openbtn1.active span:nth-of-type(3) {
     top: 35px;
     left: 20px;
-    transform: translateY(-6px) rotate(135deg);
+    transform: translateY(-6px) rotate(134deg);
     width: 30px;
     background: #ffffff;
   }
@@ -255,6 +262,8 @@ header {
     /*ナビの位置と形状*/
     top: 0;
     left: 0;
+    padding-top: 30px;
+    padding-left: 20px;
     width: 100%;
     height: 100vh; /*ナビの高さ*/
     /*動き*/
@@ -270,10 +279,7 @@ header {
     height: 100vh;
     width: 80%;
     background: #ffffff;
-    padding-top: 30px;
-    padding-left: 20px;
     transform: translateX(0px);
-    z-index: 1000;
   }
 }
 
@@ -611,6 +617,13 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (max-width: 900px) {
+  .step {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 .is-current {
   position: relative;
@@ -730,17 +743,19 @@ header {
   }
 }
 
+.inquiry {
+  display: flex;
+  flex-wrap: wrap;
+}
 @media (min-width: 901px) {
   .inquiry {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 900px;
   }
 }
 @media (max-width: 900px) {
   .inquiry {
-    margin: auto;
+    justify-content: center;
   }
 }
 
@@ -757,7 +772,7 @@ header {
 }
 @media (max-width: 900px) {
   .inquiry__list {
-    max-width: 201px;
+    width: 201px;
     height: 190px;
   }
 }
@@ -776,8 +791,10 @@ header {
   outline: solid 3px #121212;
 }
 
-.inquiry__list:not(:last-child) {
-  margin-bottom: 20px;
+@media (max-width: 900px) {
+  .inquiry__list:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .inquiry__list__title {
@@ -787,7 +804,7 @@ header {
 footer {
   background-color: #121212;
   color: #ffffff;
-  max-width: 1100px;
+  padding-bottom: 20px;
 }
 @media (min-width: 901px) {
   footer {
@@ -823,5 +840,4 @@ small {
   display: block;
   font-size: 12px;
   text-align: center;
-  padding-bottom: 20px;
 }/*# sourceMappingURL=house.css.map */

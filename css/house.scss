@@ -34,7 +34,6 @@ header.panelactive {
     opacity: 0.9;
     visibility: visible;
     background-color: #121212;
-    z-index: 0;
   }
 }
 .sns__list__twitter {
@@ -49,7 +48,12 @@ header.panelactive {
 
 .main__visual {
   position: relative;
-  height: 100vh;
+  @include pc {
+    height: 100vh;
+  }
+  @include sp {
+    height: 600px;
+  }
 }
 .parallax-bg {
   position: fixed;
@@ -71,7 +75,6 @@ header.panelactive {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
   width: auto;
   height: auto;
   z-index: -1;
@@ -139,7 +142,7 @@ header.panelactive {
   @include sp {
     top: 35px;
     left: 20px;
-    transform: translateY(-6px) rotate(135deg);
+    transform: translateY(-6px) rotate(134deg);
     width: 30px;
     background: #ffffff;
   }
@@ -157,6 +160,8 @@ header.panelactive {
     /*ナビの位置と形状*/
     top: 0;
     left: 0;
+    padding-top: 30px;
+    padding-left: 20px;
     width: 100%;
     height: 100vh; /*ナビの高さ*/
     /*動き*/
@@ -171,10 +176,7 @@ header.panelactive {
     height: 100vh;
     width: 80%;
     background: #ffffff;
-    padding-top: 30px;
-    padding-left: 20px;
     transform: translateX(0px);
-    z-index: 1000;
   }
 }
 .top {
@@ -468,6 +470,11 @@ header.panelactive {
     left: 50%;
     transform: translateX(-50%);
   }
+  @include sp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .is-current {
   position: relative;
@@ -560,14 +567,14 @@ header.panelactive {
   }
 }
 .inquiry {
+  display: flex;
+  flex-wrap: wrap;
   @include pc {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 900px;
   }
   @include sp {
-    margin: auto;
+    justify-content: center;
   }
 }
 .inquiry__list {
@@ -581,7 +588,7 @@ header.panelactive {
     max-width: 64px;
   }
   @include sp {
-    max-width: 201px;
+    width: 201px;
     height: 190px;
   }
   a {
@@ -599,7 +606,9 @@ header.panelactive {
   }
 }
 .inquiry__list:not(:last-child) {
-  margin-bottom: 20px;
+  @include sp {
+    margin-bottom: 20px;
+  }
 }
 .inquiry__list__title {
   font-size: 14px;
@@ -607,7 +616,7 @@ header.panelactive {
 footer {
   background-color: #121212;
   color: #ffffff;
-  max-width: 1100px;
+  padding-bottom: 20px;
   @include pc {
     height: 169px;
   }
@@ -637,5 +646,4 @@ small {
   display: block;
   font-size: 12px;
   text-align: center;
-  padding-bottom: 20px;
 }
