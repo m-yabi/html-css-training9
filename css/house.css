@@ -74,6 +74,10 @@ footer {
   }
 }
 
+main {
+  overflow: hidden;
+}
+
 header {
   position: fixed;
 }
@@ -94,6 +98,7 @@ header {
   background-color: #ffffff;
   height: 72px;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .header__bg {
@@ -112,7 +117,6 @@ header {
 @media (min-width: 901px) {
   .header__logo {
     max-width: 200px;
-    margin-bottom: 40px;
   }
 }
 @media (max-width: 900px) {
@@ -178,18 +182,16 @@ header {
 }
 
 .parallax-bg video {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: auto;
+  position: absolute;
+  left: 0;
   height: auto;
   z-index: -1;
   opacity: 1; /* 任意の透明度 */
 }
 @media (min-width: 901px) {
   .parallax-bg video {
-    height: 100%;
+    top: -150px;
   }
 }
 @media (max-width: 900px) {
@@ -298,6 +300,10 @@ header {
     background: #ffffff;
     transform: translateX(0px);
   }
+}
+
+.container {
+  width: 100%;
 }
 
 .top {
@@ -470,12 +476,12 @@ header {
     margin-top: 30px;
     padding-bottom: 120px;
   }
-  .feature li:not(:last-of-type) {
+  .feature li:not(:last-child) {
     margin-right: 20px;
   }
 }
 .feature li {
-  width: 258px;
+  width: 30%;
 }
 
 .feature__list {
@@ -648,6 +654,7 @@ header {
   color: #fff;
   background: #414141;
   height: 80px;
+  overflow-x: clip;
 }
 @media (min-width: 901px) {
   .is-current {
@@ -656,15 +663,16 @@ header {
 }
 @media (max-width: 900px) {
   .is-current {
-    max-width: 100vh;
+    max-width: 100%;
   }
 }
 .is-current:after {
   content: "";
   position: absolute;
   bottom: -60px;
-  left: 0;
+  left: 50%;
   right: 0;
+  transform: translateX(-50%);
   border-style: solid;
   border-color: #414141 transparent transparent transparent;
 }

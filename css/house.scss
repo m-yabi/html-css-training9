@@ -5,6 +5,9 @@ footer {
     margin-left: 300px;
   }
 }
+main {
+  overflow: hidden;
+}
 header {
   position: fixed;
   @include pc {
@@ -20,6 +23,7 @@ header {
   background-color: #ffffff;
   height: 72px;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 .header__bg {
   opacity: 0;
@@ -36,7 +40,6 @@ header {
 .header__logo {
   @include pc {
     max-width: 200px;
-    margin-bottom: 40px;
   }
   @include sp {
     width: 180px;
@@ -87,16 +90,14 @@ header.panelactive {
   }
 }
 .parallax-bg video {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: auto;
+  position: absolute;
+  left: 0;
   height: auto;
   z-index: -1;
   opacity: 1; /* 任意の透明度 */
   @include pc {
-    height: 100%;
+    top: -150px;
   }
   @include sp {
     height: 600px;
@@ -193,6 +194,9 @@ header.panelactive {
     background: #ffffff;
     transform: translateX(0px);
   }
+}
+.container {
+  width: 100%;
 }
 .top {
   background: -moz-linear-gradient(top, #5454544d, #000000cc);
@@ -340,12 +344,12 @@ header.panelactive {
   @include sp {
     margin-top: 30px;
     padding-bottom: 120px;
-    li:not(:last-of-type) {
+    li:not(:last-child) {
       margin-right: 20px;
     }
   }
   li {
-    width: 258px;
+    width: 30%;
   }
 }
 .feature__list {
@@ -498,18 +502,20 @@ header.panelactive {
   color: #fff;
   background: #414141;
   height: 80px;
+  overflow-x: clip;
   @include pc {
     width: 200px;
   }
   @include sp {
-    max-width: 100vh;
+    max-width: 100%;
   }
   &:after {
     content: "";
     position: absolute;
     bottom: -60px;
-    left: 0;
+    left: 50%;
     right: 0;
+    transform: translateX(-50%);
     border-style: solid;
     border-color: #414141 transparent transparent transparent;
     @include pc {
