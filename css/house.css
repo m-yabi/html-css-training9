@@ -796,7 +796,9 @@ header {
 }
 .inquiry__list a {
   display: block;
+  width: 100%;
   padding: 50px 40px;
+  text-align: center;
 }
 .inquiry__list img {
   width: 64px;
@@ -808,7 +810,7 @@ header {
 }
 @media (max-width: 900px) {
   .inquiry__list {
-    width: 80%;
+    width: 70%;
     height: 190px;
   }
 }
