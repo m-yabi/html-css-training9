@@ -3,6 +3,7 @@ $(function () {
     $(this).toggleClass("active");
     $("#header__menu").toggleClass("panelactive");
     $("header").toggleClass("panelactive");
+    $(".header__bg").toggleClass("is-active");
   });
 
   $(".header__menu__list a").click(function () {

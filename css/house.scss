@@ -13,9 +13,24 @@ header {
   }
   @include sp {
     z-index: 100;
-    max-width: 100%;
-    background-color: #ffffff;
-    height: 72px;
+    width: 100%;
+  }
+}
+.header__top {
+  background-color: #ffffff;
+  height: 72px;
+  overflow: hidden;
+}
+.header__bg {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  background-color: #121212;
+  transition: all 0.3s;
+  &.is-active {
+    opacity: 0.7;
+    visibility: visible;
+    height: 100vh;
   }
 }
 .header__logo {
@@ -33,7 +48,6 @@ header.panelactive {
     height: 100vh;
     opacity: 0.9;
     visibility: visible;
-    background-color: #121212;
   }
 }
 .sns__list__twitter {
@@ -47,6 +61,7 @@ header.panelactive {
 }
 
 .main__visual {
+  width: 100%;
   position: relative;
   @include pc {
     height: 100vh;
@@ -72,6 +87,7 @@ header.panelactive {
   }
 }
 .parallax-bg video {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -162,11 +178,11 @@ header.panelactive {
     left: 0;
     padding-top: 30px;
     padding-left: 20px;
-    width: 100%;
+    width: 300px;
     height: 100vh; /*ナビの高さ*/
     /*動き*/
     transition: all 0.5s;
-    transform: translateX(-250px);
+    transform: translateX(-300px);
   }
 }
 #header__menu.panelactive {
@@ -174,7 +190,6 @@ header.panelactive {
     opacity: 1;
     visibility: visible;
     height: 100vh;
-    width: 80%;
     background: #ffffff;
     transform: translateX(0px);
   }
@@ -274,17 +289,17 @@ header.panelactive {
 .project__list {
   position: relative;
   border: #ffffff 1px solid;
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: inset 0 -30px 15px -1px #2e2e2e;
-  }
   a {
     display: block;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: inset 0 -30px 15px -1px #2e2e2e;
+    }
   }
   @include pc {
     max-width: 47%;
@@ -315,8 +330,8 @@ header.panelactive {
   color: #ffffff;
   text-align: center;
   @include pc {
-    flex-wrap: wrap;
     margin-top: 60px;
+    max-width: 900px;
     padding-bottom: 160px;
     li:not(:last-child) {
       margin-right: 43px;
@@ -329,10 +344,12 @@ header.panelactive {
       margin-right: 20px;
     }
   }
+  li {
+    width: 258px;
+  }
 }
 .feature__list {
   position: relative;
-  display: block;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -340,10 +357,10 @@ header.panelactive {
   border-radius: 50%;
   border: 1px solid #ffffff;
   transition: 0.2s;
+  padding: 50% 50%;
   @include pc {
-    width: 258px;
-    height: 258px;
-
+    max-width: 258px;
+    height: 100%;
     font-size: 14px;
   }
   @include sp {
@@ -470,11 +487,6 @@ header.panelactive {
     left: 50%;
     transform: translateX(-50%);
   }
-  @include sp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 .is-current {
   position: relative;
@@ -490,28 +502,28 @@ header.panelactive {
     width: 200px;
   }
   @include sp {
-    width: 295px;
+    max-width: 100vh;
   }
   &:after {
     content: "";
     position: absolute;
     bottom: -60px;
     left: 0;
+    right: 0;
     border-style: solid;
     border-color: #414141 transparent transparent transparent;
     @include pc {
       border-width: 30px 100px;
     }
     @include sp {
-      border-width: 30px 147px;
+      border-width: 30px 50vw 0 50vw;
+      bottom: -30px;
     }
   }
 }
-
 .description {
   display: flex;
   @include pc {
-    flex-wrap: wrap;
     max-width: 620px;
   }
 }
@@ -531,7 +543,7 @@ header.panelactive {
 }
 .description__title {
   font-size: 20px;
-  width: 85%;
+  width: 100%;
   border-bottom: 1px solid #121212;
   margin-bottom: 8px;
   @include sp {
@@ -547,7 +559,7 @@ header.panelactive {
     padding-left: 86px;
   }
   @include sp {
-    max-width: 277px;
+    max-width: 100%;
     margin-left: 45px;
   }
 }
@@ -568,12 +580,12 @@ header.panelactive {
 }
 .inquiry {
   display: flex;
-  flex-wrap: wrap;
   @include pc {
     justify-content: space-between;
     max-width: 900px;
   }
   @include sp {
+    flex-wrap: wrap;
     justify-content: center;
   }
 }
@@ -584,21 +596,24 @@ header.panelactive {
   display: flex;
   justify-content: center;
   align-items: center;
-  img {
-    max-width: 64px;
-  }
-  @include sp {
-    width: 201px;
-    height: 190px;
+  &:not(:last-child) {
+    @include pc {
+      margin-right: 43px;
+    }
   }
   a {
     display: block;
-    @include pc {
-      padding: 50px 91px;
-      &:not(:last-child) {
-        margin-right: 43px;
-      }
-    }
+    padding: 50px 40px;
+  }
+  img {
+    width: 64px;
+  }
+  @include pc {
+    width: 30%;
+  }
+  @include sp {
+    width: 80%;
+    height: 190px;
   }
 
   &:hover {
