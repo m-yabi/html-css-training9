@@ -829,6 +829,7 @@ header {
 }
 
 footer {
+<<<<<<< HEAD
   background-color: #121212;
   color: #ffffff;
   padding-bottom: 20px;
@@ -867,4 +868,11 @@ small {
   display: block;
   font-size: 12px;
   text-align: center;
+=======
+  margin-left: 300px;
+}
+
+ul li {
+  font-size: 10px;
+>>>>>>> feature/teto
 }/*# sourceMappingURL=house.css.map */
