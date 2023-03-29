@@ -28,12 +28,18 @@
       </div>
       <nav id="header__menu">
         <ul class="header__menu">
-          <li class="header__menu__list"><a href="#">私たちについて</a></li>
-          <li class="header__menu__list"><a href="#">サービス</a></li>
-          <li class="header__menu__list"><a href="#">商品情報</a></li>
-          <li class="header__menu__list"><a href="#">展示会</a></li>
-          <li class="header__menu__list"><a href="#">暮らしの日記</a></li>
-          <li class="header__menu__list"><a href="#">会社概要</a></li>
+          <li class="header__menu__list">
+            <a href="#introduction">建築事例をご紹介</a>
+          </li>
+          <li class="header__menu__list">
+            <a href="#feature">明るいHOUSEの特徴</a>
+          </li>
+          <li class="header__menu__list">
+            <a href="#flow">家ができるまでの流れ</a>
+          </li>
+          <li class="header__menu__list">
+            <a href="#inquiry">お問い合わせ</a>
+          </li>
           <li class="sns__list">
             <a class="sns__list__twitter" href="https://twitter.com/"
               >Twitter</a
@@ -53,7 +59,7 @@
         <div class="parallax-bg"></div>
       </div>
       <div class="container top">
-        <div class="introduction__section">
+        <div class="introduction__section" id="introduction">
           <h2 class="section__title section__title--primary">
             建築事例をご紹介
           </h2>
@@ -84,7 +90,7 @@
             </li>
           </ul>
         </div>
-        <div class="feature__section">
+        <div class="feature__section" id="feature">
           <h2 class="section__title section__title--primary">
             明るいHOUSEの特徴
           </h2>
@@ -117,7 +123,7 @@
         </div>
       </div>
       <div class="container bottom">
-        <div class="flow__section">
+        <div class="flow__section" id="flow">
           <h2 class="section__title section__title--secondary">
             家ができるまでの流れ
           </h2>
@@ -178,7 +184,7 @@
             </div>
           </div>
         </div>
-        <div class="inquiry__section">
+        <div class="inquiry__section" id="inquiry">
           <h2 class="section__title section__title--secondary">お問い合わせ</h2>
           <p class="inquiry__text">お問い合わせは下記からお願いいたします。</p>
           <ul class="inquiry">
@@ -207,12 +213,10 @@
     </main>
     <footer>
       <div class="footer__menu">
-        <a class="footer__menu__list" href="#">私たちについて</a>
-        <a class="footer__menu__list" href="#">サービス</a>
-        <a class="footer__menu__list" href="#">商品情報</a>
-        <a class="footer__menu__list" href="#">展示会</a>
-        <a class="footer__menu__list" href="#">暮らしの日記</a>
-        <a class="footer__menu__list" href="#">会社概要</a>
+        <a class="footer__menu__list" href="#introduction">建築事例をご紹介</a>
+        <a class="footer__menu__list" href="#feature">明るいHOUSEの特徴</a>
+        <a class="footer__menu__list" href="#flow">家ができるまでの流れ</a>
+        <a class="footer__menu__list" href="#inquiry">お問い合わせ</a>
       </div>
       <small>Copyright © 2021 Akarui HOUSE All Rights Reserved.</small>
     </footer>
@@ -232,6 +236,7 @@
       video.play();
       document.querySelector(".parallax-bg").appendChild(video);
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

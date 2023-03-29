@@ -49,7 +49,6 @@ header {
 header.panelactive {
   @include sp {
     height: 100vh;
-    opacity: 0.9;
     visibility: visible;
   }
 }
